@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  <style>
+    
+  </style>
+</head>
+<body>
+  <section class="contnair" id="contnair">
+    <header>
+    
+      <img src="assets/images/illustration-sign-up-desktop.svg" alt="img d'illustration" class="desktop-img">
+  
+      <img src="assets/images/illustration-sign-up-mobile.svg" alt="img d'illustration" class="mobile-img">
+  
+    </header>
+    <main>
+      <!-- Sign-up form start -->
+      <h1>Stay updated!</h1>
+    
+      <P class="form-parag">Join 60,000+ product managers receiving monthly updates on:</p>
+      <ul>
+        <li>Product discovery and building what matters</li>
+        <li>Measuring to ensure updates are a success</li>
+        <li>And much more!</li>
+      </ul>
+      <form id="myform">
+        <label for="email">Email address</label>
+        <span class="echec" id="echec"></span>
+        <input type="text" id="email" placeholder="ash@loremcompany.com">
+        <button type="submit" id="formbtn">Subscribe to monthly newsletter</button>
+      </form>
+      <!-- Sign-up form end -->
+    </main>
+
+  </section>
+
+  <!-- Success message start -->
+  <section class="hidden" id="succes">
+    <img class="img-succes" src="assets/images/icon-success.svg" alt="icon de succes">
+    <h2>Thanks for subscribing!</h2>
+    <p class="succes-parag">A confirmation email has been sent to <span>ash@loremcompany.com</span>.
+      Please open it and click the button inside to confirm your subscription.</p>
+      <button type="submit" class="btn">Dismiss message</button>
+    </section>
+    <!-- Success message end -->
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="">HELESS FANEL</a>.
+  </footer>
+  <script src="script.JS"></script>
+</body>
+</html>

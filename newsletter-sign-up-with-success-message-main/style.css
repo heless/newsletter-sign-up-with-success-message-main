@@ -1,0 +1,307 @@
+/* importation de la police d'écriture dépuis google font */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500&family=Fraunces:wght@700&family=Roboto:wght@400;700&display=swap');
+/* ----------------------------------------------- */
+/* ---------------style général ---------------------*/
+*,::after,::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.mobile-img{
+    display: none;
+}
+.attribution { 
+    font-size: 11px; text-align: center;
+    color:hsl(0, 0%, 100%) ; 
+    position:relative;
+    font-size: 13px;
+    bottom: -40px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+body{
+    height: 100vh;
+    display: grid;
+    place-content:center ;
+    place-items: center;
+    background-color: hsl(234, 29%, 20%);
+    font-family:'Roboto',sans-serif;
+
+}
+/* ------------------style liés au contnair------------------ */
+.contnair{
+    display: flex;
+    background-color:hsl(0, 0%, 100%);
+    padding: 20px;
+    place-items: center;
+    border-radius: 20px;
+    
+}
+header{
+    position:relative;
+    order: 2;
+    width: 300px;
+}
+.desktop-img{
+    width: 100%;
+}
+.contnair main{
+    display: grid;
+    row-gap: 20px;
+    width: 300px;
+    margin:0 40px 0 20px;
+}
+main h1{
+    font-size:47px;
+}
+.form-parag{
+    font-size: 13px;
+}
+main ul{
+    margin-left: 18px;
+    display: grid;
+    font-size: 13px;
+    row-gap: 15px;
+    list-style:url(assets/images/icon-list.svg);
+}
+label{
+    display: inline-block;
+    position: relative;
+    top: 17px;
+    bottom: 3px;
+    font-size: 12px;
+    font-weight: bold;
+}
+#myform{
+    position: relative;
+    bottom:20px ;
+    display: grid;
+    row-gap: 15px;
+}
+#email{
+    position: relative;
+    bottom: 12px;
+    height: 40px;
+    padding: 10px;
+    border-radius: 07px;
+    border: 1px solid rgba(128, 128, 128, 0.4);
+}
+#formbtn{
+    position: relative;
+    bottom: 10px;
+    height: 40px;
+    border-radius: 07px;
+    /* outline: 0; */
+    border: 0px;
+    background-color:hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+
+}
+#formbtn:hover{
+    background: rgb(244,67,98);
+background: linear-gradient(34deg, rgba(244,67,98,1) 22%, rgba(255,98,87,1) 49%);
+}
+.hidden{
+    display: none;
+}
+.echecForm{
+    border:1px solid hsl(4, 100%, 67%);
+    background-color:rgb(250, 191, 180,0.5);
+    /* background-color:#fabfb4; */
+}
+.echecForm::placeholder{
+    color:hsl(4, 100%, 67%);
+}
+
+
+.echec{
+    position:relative;
+    bottom: 03px;
+    text-align: right;
+    font-size: 12px;
+    color: rgb(214, 80, 80);
+}
+/*------------------------------------------------------------- */
+
+
+/* ---------le responsive ------------- */
+
+@media (max-width:430px) {
+    body{
+        background-color: hsl(0, 0%, 100%);
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+    }
+    .attribution{
+        margin: 0 auto;
+        color: hsl(234, 29%, 20%);;
+        text-align: center;
+    }
+    .desktop-img{
+        display: none;
+    }
+    .contnair{
+        width: 100%;
+        display:flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    header{
+        position: relative;
+        top: -10px;
+        width: 100%; 
+        order: initial;
+    }
+    .mobile-img{
+        display:block;
+        width: 100%;
+    }
+    .contnair main{
+        /* row-gap: 20px; */
+        width: 250px;
+        margin-top: 25px;
+    }
+    main h1{
+        font-size:30px;
+    }
+    .form-parag{
+        font-size: 13px;
+    }
+    
+}
+@media (max-width:430px) and (min-width:375px) {
+    .contnair main{
+        /* row-gap: 20px; */
+        width: 350px;
+        margin-top: 25px;
+    }
+    main h1{
+        font-size:40px;
+    }
+    .form-parag{
+        font-size: 15px;
+    }
+}
+@media (max-width:760px) and (min-width:431px){
+    .contnair{
+        width: 95%;
+    }
+    header{
+        width: 60%;
+    }
+    .contnair main{
+        width: 60%;
+        padding: 15px;
+        border-radius: 15px;
+        margin:0 30px 0 15px;
+        row-gap: 5px;
+    }
+    main h1{
+        font-size:5vw;
+    }
+    .form-parag{
+        font-size:2vw;
+    }
+    main ul{
+        font-size:13px;
+    }
+    main ul{
+        font-size: 9px;
+        row-gap: 8px;
+    }
+    #myform{
+        margin-top:10px;
+        
+    }
+    #email{
+        height: 30px;
+        padding: 10px;
+        border-radius: 05px;
+    }
+    #formbtn{
+        height: 30px;
+        font-size: 10px;
+    }
+    label{
+        font-size:1.6vw;
+        font-weight:bold;
+        /* top: 15px; */
+    }
+    .attribution{
+        margin: 0 auto -85px auto;
+        text-align: center;
+    }
+    .echec{
+        position:relative;
+        text-align: right;
+        font-size:1.6vw;
+        color: rgb(214, 80, 80);
+    }
+
+}
+/* ----------------------------------------------------------------------- */
+
+/* -------------- style liés au messge du succes ------------------------- */
+
+
+.succes{
+    display:grid;
+    row-gap: 15px;
+    width: 400px;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
+    padding: 40px;
+}
+h2{
+    font-size: 40px;
+}
+span{
+    font-weight: bold;
+}
+.btn{
+    height: 50px;
+    background-color:hsl(234, 29%, 20%);
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+    border: 0px;
+    border-radius: 10px;
+}
+.btn:hover{
+    background: rgb(244,67,98);
+background: linear-gradient(34deg, rgba(244,67,98,1) 22%, rgba(255,98,87,1) 49%);
+}
+@media (max-width:410px) {
+    body{
+        height: 100vh;
+        background-color: hsl(0, 0%, 100%);
+        display:flex;
+        padding: 10px;
+        flex-direction: column;
+    }
+    .succes{
+        height: 100%;
+        width: 100%;
+        display:flex;
+        row-gap: 30px;
+        flex-direction: column;
+        padding:50px 10px 10px 10px;
+        place-content: start;
+
+    }
+    .img-succes{
+        display: inline-block;
+        height: 60px;
+        margin-right:75vw;
+    }
+    .btn{
+        margin-top: 80px;
+    }
+    .succes-parag{
+        font-size:4vw;
+    }
+}
+
+/* ----------------------------------------------------------------------- */
